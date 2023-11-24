@@ -1,4 +1,4 @@
-from random import randint
+import secrets
 
 while(True):
     score = 0
@@ -7,7 +7,7 @@ while(True):
     print("TURN", turn)
     while(score < 20):
         if(input("Roll or hold? (r/h):") == 'r'):
-            die = randint(1,6)
+            die = secrets.SystemRandom().randint(1,6)
             print("Die: ", die)
             if(die == 1):
                 turnPoints = 0 

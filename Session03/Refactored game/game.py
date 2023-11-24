@@ -1,9 +1,9 @@
-from random import randint
+import secrets
 
 
 class Game:
     def __init__(self):
-        self.players = ['x','o'] if randint(0,1) == 0 else ['o','x']
+        self.players = ['x','o'] if secrets.SystemRandom().randint(0,1) == 0 else ['o','x']
         self.turn = 1
         self.board = [ ['_' for i in range(3)]
                                 for i in range(3)]
