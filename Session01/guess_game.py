@@ -1,9 +1,9 @@
-import random
+import secrets
 
 while(True):
     print("Guess Game")
     print("Numbers from 1 to 10")
-    num = random.randint(1,10)
+    num = secrets.SystemRandom().randint(1,10)
     tries = 0
     while(True):
         g = int(input("Guess the number: "))

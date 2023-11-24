@@ -1,4 +1,4 @@
-from random import randint
+import secrets
 
 def board_filled(board):
     for row in board:
@@ -26,7 +26,7 @@ def print_board(board):
     print()
 
 def game():
-    player1 = 'x' if randint(0,1) == 0 else 'o' # set x and o as player 1 or player 2
+    player1 = 'x' if secrets.SystemRandom().randint(0,1) == 0 else 'o' # set x and o as player 1 or player 2
     player2 = 'x' if player1 == 'o' else 'o'
     print("Player 1 is", player1)
     print("Player 2 is", player2)

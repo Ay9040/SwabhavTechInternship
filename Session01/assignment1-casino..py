@@ -1,10 +1,10 @@
-from random import randint
+import secrets
 
 point = 0
 
 while(True):
-    dice1 = randint(1,6)
-    dice2 = randint(1,6)
+    dice1 = secrets.SystemRandom().randint(1,6)
+    dice2 = secrets.SystemRandom().randint(1,6)
     total = dice1 + dice2
     print("You rolled", dice1, "+", dice2, "=", total)
     if total in [7,11] and point == 0:
